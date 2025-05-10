@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TemplateMAUILiveCharts2.Pages.ColumnSeries"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+             xmlns:controls="clr-namespace:TemplateMAUILiveCharts2.Controls"
+             Title="ColumnSeries">
+    <StackLayout>
+        <Grid Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label 
+                Text="Column Series Example"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Grid.Row="0"
+                Margin="0,0,0,10"/>
+            <Label
+                Text="This chart shows sample column series data using LiveCharts."
+                FontSize="16"
+                HorizontalOptions="Center"
+                Grid.Row="1"
+                Margin="0,0,0,20"/>
+            <controls:ChartView 
+                Grid.Row="2"
+                Series="{Binding Series}"
+                LegendTextPaint="{Binding LegendTextPaint}"
+                MinimumHeightRequest="300"
+                />
+            <Button
+                Grid.Row="3"
+                Text="Update data"
+                Command="{Binding UpdateDataCommand}"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Margin="0,20,0,0"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

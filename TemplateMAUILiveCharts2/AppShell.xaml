@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:page="clr-namespace:TemplateMAUILiveCharts2.Pages"
+       xmlns:local="clr-namespace:TemplateMAUILiveCharts2"
+       x:Class="TemplateMAUILiveCharts2.AppShell">
+
+    <!-- Главное меню -->
+    <FlyoutItem Title="Home">
+        <ShellContent Title="Home" ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="LineSeries" >
+        <ShellContent Title="LineSeries" ContentTemplate="{DataTemplate page:LineSeries}" />
+    </FlyoutItem>
+    <FlyoutItem Title="PieSeries">
+        <ShellContent Title="PieSeries" ContentTemplate="{DataTemplate page:PieSeries}" />
+    </FlyoutItem>
+    <FlyoutItem Title="ColumnSeries">
+        <ShellContent Title="ColumnSeries" ContentTemplate="{DataTemplate page:ColumnSeries}" />
+    </FlyoutItem>
+    <FlyoutItem Title="LineZoom">
+        <ShellContent Title="ColumnSeries" ContentTemplate="{DataTemplate page:LineZoom}" />
+    </FlyoutItem>
+    <FlyoutItem Title="LoadCVS">
+        <ShellContent Title="ColumnSeries" ContentTemplate="{DataTemplate page:SampleCVSload}" />
+    </FlyoutItem>
+</Shell>

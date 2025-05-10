@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+             x:Class="TemplateMAUILiveCharts2.Pages.SampleCVSload"
+             Title="Sample CSV Load">
+
+    <VerticalStackLayout Padding="10" Spacing="10">
+        <Button Text="Загрузить CSV" Command="{Binding LoadCsvCommand}" />
+
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Показать Количество" Command="{Binding ShowQuantityCommand}" />
+            <Button Text="Показать Сумму" Command="{Binding ShowTotalCommand}" />
+            <Button Text="Показать Среднюю Цену" Command="{Binding ShowAveragePriceCommand}" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Продажи по времени" Command="{Binding ShowTimeSalesCommand}" />
+            <Button Text="Доля продуктов" Command="{Binding ShowProductShareCommand}" />
+        </HorizontalStackLayout>
+
+        <!-- Cartesian Chart -->
+        <lvc:CartesianChart Series="{Binding SeriesCollection}"
+                            XAxes="{Binding XAxes}"
+                            YAxes="{Binding YAxes}"
+                            ZoomMode="X"
+                            MinimumHeightRequest="300"
+                            LegendTextPaint="{Binding LegendTextPaint}"
+                            IsVisible="{Binding IsCartesianVisible}" />
+
+        <!-- Pie Chart -->
+        <lvc:PieChart Series="{Binding SeriesCollection}"
+                      LegendTextPaint="{Binding LegendTextPaint}"
+                      MinimumHeightRequest="300"
+                      IsVisible="{Binding IsPieVisible}" />
+    </VerticalStackLayout>
+</ContentPage>

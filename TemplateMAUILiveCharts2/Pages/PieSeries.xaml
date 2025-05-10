@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TemplateMAUILiveCharts2.Pages.PieSeries"
+                xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+             Title="PieSeries">
+    <StackLayout>
+        <lvc:PieChart
+            Series="{Binding Series}"
+            LegendPosition="Bottom"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            LegendTextPaint="{Binding LegendTextPaint}"
+            />
+        <Button
+            Text="Update data"
+            Command="{Binding UpdateDataCommand}"
+            HorizontalOptions="Center"
+            VerticalOptions="End"
+            Margin="0,20,0,0"/>
+    </StackLayout>
+</ContentPage>
